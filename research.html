@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="Georgios Tsialas" name="author"/><meta content="Doctoral research and current working papers by Georgios Tsialas." name="description"/><meta content="#ffffff" name="theme-color"/><link href="https://gtsialas.github.io/research.html" rel="canonical"/><link href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMxZTY1OGYiLz48dGV4dCB4PSIzMiIgeT0iNDMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSIzMCIgZmlsbD0iI2ZmZiI+R1Q8L3RleHQ+PC9zdmc+Cg==" rel="icon" type="image/svg+xml"/><style>
+/* Academic portfolio inspired by the layout conventions of the reference website.
+   Original design and code. Easy theme editing: change custom properties below. */
+:root {
+  --ink:#182633; --ink-strong:#152330; --muted:#637382;
+  --accent:#2273a5; --accent-dark:#13577e; --hairline:#e3e8ec;
+  --canvas:#ffffff; --subtle:#f7f9fb; --mid:#eef4f8;
+  --max:1168px; --shadow:0 10px 35px rgba(24,38,51,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:94px}
+body{margin:0;color:var(--ink);background:var(--canvas);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:3px solid #91c6eb;outline-offset:3px}
+img{max-width:100%;display:block}h1,h2,h3,h4,p{margin-top:0}
+h1,h2,h3{line-height:1.23;letter-spacing:-.025em;color:var(--ink-strong)}
+h1{font-size:2.65rem;margin-bottom:15px;font-weight:750}h2{font-size:2.45rem;font-weight:750;margin-bottom:25px}h3{font-size:1.22rem;font-weight:700;margin-bottom:8px}
+p{margin-bottom:16px}ul{margin-top:5px;padding-left:20px}
+.container{width:min(var(--max),calc(100% - 68px));margin-inline:auto}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.98);border-bottom:1px solid var(--hairline);box-shadow:0 2px 10px rgba(30,48,70,.025)}
+.header-inner{height:77px;display:flex;align-items:center;justify-content:flex-end;gap:26px}
+.site-brand{font-size:20px;letter-spacing:-.035em;white-space:nowrap;font-weight:750;color:var(--ink-strong)}.site-brand:hover{text-decoration:none;color:var(--accent)}
+.site-nav{display:flex;align-items:center;gap:28px;margin-left:auto}
+.site-nav a{font-size:13.8px;white-space:nowrap;font-weight:650;color:#374756;transition:color .2s}
+.site-nav a:hover,.site-nav a.active{color:var(--accent);text-decoration:none}
+.menu-toggle{display:none;background:transparent;border:0;color:var(--ink);font-size:25px;cursor:pointer;line-height:1}
+.hero{padding:77px 0 76px;min-height:590px}
+.hero-layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:82px;align-items:start}
+.profile{text-align:center;padding-top:11px}
+.avatar{width:236px;height:236px;border-radius:50%;margin:0 auto 22px;overflow:hidden;background:#dce8ef;position:relative;border:6px solid #f1f5f8;box-shadow:0 8px 30px rgba(32,61,82,.09)}
+.avatar .portrait{width:100%;height:100%;object-fit:cover;object-position:center 26%;position:absolute;inset:0;z-index:2;background:#e5edf3}
+.avatar .monogram{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;background:linear-gradient(140deg,#c9dce9,#eaf3f8);color:#567b94;font-size:58px;font-weight:700;letter-spacing:-.07em;z-index:1}
+.avatar.no-photo .portrait{display:none}
+.profile h1{font-size:27px;line-height:1.28;margin:0 0 9px}
+.profile .position{font-size:15.2px;color:#475969;line-height:1.56;margin:0 0 3px}
+.profile .institution{font-size:15px;font-weight:700;color:var(--accent);margin-bottom:20px;line-height:1.5}
+.socials{display:flex;justify-content:center;align-items:center;gap:11px;flex-wrap:wrap}
+.socials a{display:inline-flex;align-items:center;justify-content:center;width:37px;height:37px;border:1px solid var(--hairline);border-radius:50%;font-weight:700;color:var(--accent);font-size:13px;transition:background .2s,transform .2s}
+.linkedin-mark{font-size:16px;font-weight:800;letter-spacing:-.07em}.socials a:hover{background:var(--mid);transform:translateY(-2px);text-decoration:none}.socials svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.intro h2{font-size:34px;margin:0 0 22px}.intro>p{color:#3f4d59;line-height:1.83;font-size:16px}.intro p:first-of-type{font-size:16.4px}
+.about-lower{display:grid;grid-template-columns:.91fr 1.09fr;gap:36px;margin-top:29px}
+.about-lower h3{font-size:18px;margin:0 0 12px}
+.interests{list-style:none;padding:0;margin:0}.interests li{margin:0 0 7px;padding-left:17px;position:relative;color:#354655;font-size:15px}.interests li::before{content:'›';position:absolute;left:0;color:var(--accent);font-weight:800}
+.education{display:grid;gap:17px}.edu-row{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start}.edu-icon{color:var(--accent);font-size:18px;margin-top:1px}.edu-row strong{font-size:14px;line-height:1.3;display:block}.edu-row small{font-size:13px;color:var(--muted);line-height:1.5;display:block;margin-top:3px}
+.section{padding:87px 0 92px;scroll-margin-top:70px}.section.alt{background:var(--subtle)}.section-head{display:grid;grid-template-columns:286px 1fr;gap:48px;margin-bottom:37px;align-items:start}.section-head h2{margin:0}.section-head p{margin:6px 0 0;color:var(--muted);max-width:720px}
+/* Alternating soft-blue and white backgrounds across the homepage.
+   Research: blue; Teaching: white; Writing: blue; Talks: white; Contact: blue. */
+.section--research,.section--writing,.section--contact{background:#edf4fb;--section-accent:#226991}
+.section--teaching,.section--talks{background:#ffffff;--section-accent:#557184}
+.section--research .overline,.section--teaching .overline,.section--writing .overline,.section--talks .overline,.section--contact .overline,
+.section--research .more-link,.section--teaching .more-link,.section--writing .more-link,.section--talks .more-link{color:var(--section-accent)}
+.section--research .more-link:hover,.section--teaching .more-link:hover,.section--writing .more-link:hover,.section--talks .more-link:hover{color:var(--ink-strong)}
+/* Matching tones on the dedicated research, teaching, writing and talks pages. */
+.page-lead--research,.page-lead--writing{background:#edf4fb}
+.page-lead--teaching,.page-lead--talks{background:#ffffff}
+.page-lead--research .overline,.page-lead--writing .overline{color:#226991}
+.page-lead--teaching .overline,.page-lead--talks .overline{color:#557184}
+.section-body{margin-left:334px}.overline{font-size:11px;letter-spacing:.16em;font-weight:800;color:var(--accent);text-transform:uppercase;display:block;margin-bottom:14px}
+.publication{padding:0 0 27px;margin-bottom:29px;border-bottom:1px solid var(--hairline)}.publication:last-child{border:0;margin:0;padding-bottom:0}
+.pub-type{font-size:11px;text-transform:uppercase;letter-spacing:.11em;font-weight:800;color:#80909d;margin:0 0 7px}
+.publication h3{font-size:19px;line-height:1.42;margin-bottom:8px;font-weight:700}.pub-meta{color:var(--muted);font-size:14.3px;margin-bottom:11px;line-height:1.6}
+.link-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:13px}
+.small-link{display:inline-flex;align-items:center;gap:6px;font-weight:650;font-size:12.5px;color:var(--accent);border:1px solid #cddde8;padding:4px 11px;border-radius:4px;background:white}
+.small-link:hover{text-decoration:none;background:#eff6fa}
+.more-link{margin-top:23px;display:inline-flex;gap:7px;align-items:center;font-size:14px;font-weight:700}
+.content-list{border-top:1px solid var(--hairline)}.content-item{display:grid;grid-template-columns:93px 1fr;gap:19px;padding:22px 0;border-bottom:1px solid var(--hairline)}.item-date{font-weight:700;font-size:14px;color:#8795a0;margin-top:2px}.content-item h3{font-size:17px;line-height:1.42;margin-bottom:5px}.content-item p{font-size:14px;color:var(--muted);margin:0;line-height:1.67}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}.contact-grid p{color:#4b5967}.contact-line{display:flex;gap:11px;align-items:center;margin:13px 0}.contact-line svg{height:19px;width:19px;stroke:var(--accent);fill:none;stroke-width:1.8}
+.site-footer{padding:30px 0;background:#ffffff;color:#75828e;font-size:12.5px;border-top:1px solid var(--hairline)}.footer-inner{display:flex;justify-content:flex-end;gap:20px;flex-wrap:wrap}
+/* Detail pages */
+.page-lead{background:var(--subtle);padding:76px 0 57px;border-bottom:1px solid var(--hairline)}.page-lead h1{font-size:44px;margin:0 0 15px}.page-lead p{font-size:17px;color:#536473;max-width:790px;margin:0}
+.detail-wrap{padding:63px 0 93px}.detail-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:70px}.detail-sidebar{align-self:start;position:sticky;top:116px}.detail-sidebar .avatar{width:126px;height:126px;margin:0 0 15px;border-width:4px}.detail-sidebar .monogram{font-size:30px}.detail-sidebar h2{font-size:19px;margin-bottom:6px}.detail-sidebar p{font-size:13px;color:var(--muted);margin-bottom:17px;line-height:1.5}
+.detail-sidebar .socials{justify-content:flex-start;gap:9px}.detail-content h2{font-size:25px;margin-bottom:20px}.detail-content section+section{margin-top:48px}.detail-content .publication{margin-bottom:23px}.detail-content .publication h3{font-size:19px}.lead-note{color:var(--muted);font-size:15px}.text-block{margin-bottom:29px}.text-block h3{margin-bottom:10px}.text-block p{color:#536270}
+.note{border-left:3px solid var(--accent);padding:11px 20px;background:var(--subtle);color:var(--muted);font-size:14px}
+@media(max-width:1010px){.hero-layout{grid-template-columns:255px 1fr;gap:45px}.section-head{grid-template-columns:238px 1fr;gap:36px}.section-body{margin-left:274px}.site-nav{gap:15px}.site-nav a{font-size:13px}}
+@media(max-width:760px){.container{width:min(100% - 38px,620px)}.header-inner{height:68px}.site-brand{font-size:19px}.menu-toggle{display:block}.site-nav{display:none;position:absolute;top:68px;left:0;right:0;background:white;padding:17px 22px 21px;border-bottom:1px solid var(--hairline);box-shadow:0 12px 24px rgba(22,39,54,.07);flex-direction:column;align-items:stretch;gap:0}.site-nav.open{display:flex}.site-nav a{padding:11px 0;font-size:15px}
+.hero{padding:49px 0 56px;min-height:0}.hero-layout{display:flex;flex-direction:column;gap:47px}.profile{align-self:center;padding:0}.avatar{width:195px;height:195px}.profile h1{font-size:25px}.intro h2{font-size:29px}.intro>p{font-size:15.5px}.about-lower{gap:30px}.section{padding:62px 0 67px}.section-head{display:block;margin-bottom:26px}.section-head h2{font-size:32px;margin-bottom:12px}.section-body{margin-left:0}.contact-grid{grid-template-columns:1fr;gap:6px}.page-lead{padding:52px 0 45px}.page-lead h1{font-size:35px}.detail-wrap{padding:49px 0 65px}.detail-layout{grid-template-columns:1fr;gap:36px}.detail-sidebar{position:static;display:none}}
+@media(max-width:440px){.about-lower{grid-template-columns:1fr;gap:25px}.content-item{grid-template-columns:64px 1fr;gap:13px}.section-head h2{font-size:29px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+
+.overline{display:none !important;}
+.header-inner{justify-content:flex-end;}
+.section-head h2{margin-top:0;}
+.detail-wrap{padding-top:52px !important;}
+</style><title>Research | Georgios Tsialas</title></head><body><header class="site-header"><div class="container header-inner"><button aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button">☰</button><nav aria-label="Primary navigation" class="site-nav" id="main-nav"><a href="index.html#home">Home</a><a class="active" href="research.html">Research</a><a href="teaching.html">Teaching</a><a href="writing.html">Writing</a><a href="index.html#talks">Talks</a><a href="index.html#contact">Contact</a></nav></div></header><main><div class="container detail-wrap"><div class="detail-layout"><aside class="detail-sidebar"><div class="avatar"><span aria-hidden="true" class="monogram">GT</span><img alt="Portrait of Georgios Tsialas" class="portrait" src="https://gtsialas.github.io/georgios-tsialas.jpg"/></div><h2>Georgios Tsialas</h2><p>PhD Candidate in Politics<br/>King's College London</p><div aria-label="Profile links" class="socials">
+<a aria-label="Email" href="mailto:georgios.tsialas@kcl.ac.uk" title="Email Georgios"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="m3 7 9 6 9-6"></path></svg></a>
+<a aria-label="View CV" href="https://gtsialas.github.io/CV_Georgios_Tsialas.pdf" rel="noopener noreferrer" target="_blank" title="Curriculum vitae">CV</a>
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/georgios-tsialas-55b5031b5/" rel="noopener noreferrer" target="_blank" title="LinkedIn"><span aria-hidden="true" class="linkedin-mark">in</span></a>
+</div></aside><article class="detail-content">
+<section id="doctoral"><h2>Collective Securitization, Polycrisis and EU Governance</h2>
+<p>My doctoral project examines why comparable systemic risks are framed differently under conditions of polycrisis, and how EU collective securitization strategies are accepted, contested or resisted across levels of governance.</p>
+<p>The project studies the European Commission's framing of interconnected risks and their reception within Member States. Energy-related risks are the central empirical reference point, with attention to their connections with geopolitical, environmental and economic pressures.</p>
+<p>The research uses a comparative, mixed-methods approach involving qualitative content analysis, parliamentary text analysis and statistical modelling. The empirical scope includes EU institutions and four Member States: France, Greece, Italy and Hungary.</p>
+<p class="note">Doctoral research in progress · Department of Political Economy, King's College London</p></section>
+<section><h2>Working Papers</h2>
+<article class="publication" id="state-size"><div class="pub-type">Working paper</div><h3>State Size and Securitization Capacity: Comparative Evidence from Cyprus, Greece, and Italy</h3><p class="pub-meta">Georgios Tsialas, with Dr Alexandros Zachariadis</p><p>Comparative research on state size and securitization capacity, drawing on evidence from Cyprus, Greece and Italy.</p></article>
+<article class="publication" id="tempi"><div class="pub-type">Working paper</div><h3>From Tragedy to Collective Action: The Organization of Agency Following the Tempi Train Disaster</h3><p class="pub-meta">Georgios Tsialas, with Dr Athanasia Chalari and Prof Georgios Karyotis</p><p>A study of the organisation of agency and the emergence of collective action after the Tempi train disaster.</p></article>
+<p class="lead-note">These manuscripts are works in progress; publication details and downloads will be added when available.</p>
+</section></article></div></div></main><footer class="site-footer"><div class="container footer-inner"><span>© 2026 Georgios Tsialas. All rights reserved.</span><span><a href="index.html">Return to homepage ↑</a></span></div></footer><script>
+/* Accessible mobile navigation, current-section highlighting, photo fallback. */
+(function () {
+  const menu = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  if (menu && nav) {
+    menu.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menu.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      menu.textContent = open ? '×' : '☰';
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menu.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-label', 'Open navigation');
+      menu.textContent = '☰';
+    }));
+  }
+  document.querySelectorAll('img.portrait').forEach(img => {
+    const fallback = () => img.closest('.avatar')?.classList.add('no-photo');
+    img.addEventListener('error', fallback);
+    if (img.complete && img.naturalWidth === 0) fallback();
+  });
+  if ('IntersectionObserver' in window && document.body.classList.contains('homepage')) {
+    const sections = [...document.querySelectorAll('section[id]')];
+    const links = [...document.querySelectorAll('.site-nav a[href^="#"]')];
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + visible.target.id));
+    }, {rootMargin:'-15% 0px -65% 0px',threshold:0});
+    sections.forEach(section => observer.observe(section));
+  }
+})();
+
+</script>
+</body></html>
